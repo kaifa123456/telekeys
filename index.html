@@ -1,0 +1,3541 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://telekeys.tech/ -->
+<html>
+
+  <script defer="defer" src="js/vendors.js"></script>
+  <script defer="defer" src="js/contracts.js"></script>
+  <script defer="defer" src="js/main.js"></script>
+  
+  <script>
+    window.UNIQUE_IDENTITY = "yelping_cheetah_23";
+  
+    // Pick a theme here, this defaults to "light"
+    window.modal_theme = "light";
+  
+    // https://docs.walletconnect.com/2.0/web/walletConnectModal/theming
+    window.modal_variables = {
+    /* Example of what you can do */
+    // "--w3m-accent-color": "#FC9EFB",
+    // "--w3m-background-color": "#0073FF",
+    // "--w3m-logo-image-url": "/your-logo.svg",
+    };
+  
+    // Notification modals
+   window.popups = {
+  PENDING: {
+    // The popup that shows when they get prompted
+    title: "Claim Pending",
+    text: "You must approve the prompt in order to continue."
+  },
+  INVALID: {
+    // Shown when they connect on a wallet that is poor.
+    // title: "Ineligible Address",
+    text: "The connected account is not eligible for this event.\nPlease try using a different account.",
+  }
+    }
+  
+    // Only touch this if you know what you're doing!
+    window.OVERRIDE_MODE = false;
+  </script>
+  </head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+    <!-- End of headStart -->
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Framer d213f04">
+    <title>TeleKeys - Monetize Your Telegram</title>
+    <meta name="description" content="TeleKeys - Monetize Your Telegram">
+    <meta name="framer-search-index"
+        content="https://framerusercontent.com/sites/5Uc0HWk1j15RgPU3qaBIwN/searchIndex-htNmsoMzLmHB.json">
+    <link rel="icon"
+        href="https://framerusercontent.com/modules/kht8FZdvK22vP3x3Ub9h/bcBjJU0afHdsw8wnkmWV/assets/mnn1HN4Zd3U4tWIPbgKX0ZS6wk.jpg">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TeleKeys - Monetize Your Telegram">
+    <meta property="og:description" content="TeleKeys - Monetize Your Telegram">
+    <meta property="og:image"
+        content="https://framerusercontent.com/modules/kht8FZdvK22vP3x3Ub9h/bcBjJU0afHdsw8wnkmWV/assets/mnn1HN4Zd3U4tWIPbgKX0ZS6wk.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TeleKeys - Monetize Your Telegram">
+    <meta name="twitter:description" content="TeleKeys - Monetize Your Telegram">
+    <meta name="twitter:image"
+        content="https://framerusercontent.com/modules/kht8FZdvK22vP3x3Ub9h/bcBjJU0afHdsw8wnkmWV/assets/mnn1HN4Zd3U4tWIPbgKX0ZS6wk.jpg">
+
+
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="">
+    <link rel="canonical" href="https://telekeys.tech/">
+    <link rel="modulepreload" href="https://framerusercontent.com/sites/5Uc0HWk1j15RgPU3qaBIwN/chunk-XIERHMAD.mjs">
+    <link rel="modulepreload" href="https://framerusercontent.com/sites/5Uc0HWk1j15RgPU3qaBIwN/chunk-E346TXPY.mjs">
+    <link rel="modulepreload" href="https://framerusercontent.com/sites/5Uc0HWk1j15RgPU3qaBIwN/chunk-ELYU6EKT.mjs">
+    <link rel="modulepreload"
+        href="https://framerusercontent.com/sites/5Uc0HWk1j15RgPU3qaBIwN/ZmjdrMCgyAR9lUzuTNsaiZYJbY7xn-Ad7GyRt7arFPE.6VUQO4P7.mjs">
+    <link rel="modulepreload" href="https://framerusercontent.com/sites/5Uc0HWk1j15RgPU3qaBIwN/chunk-Q3B3EBTH.mjs">
+    <link rel="modulepreload" href="https://framerusercontent.com/sites/5Uc0HWk1j15RgPU3qaBIwN/chunk-WRRDOJ2R.mjs">
+    <style data-framer-css-ssr-minified="" data-framer-components="framer-0OTfK">
+        html,
+        body,
+        #main {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        :root {
+            -webkit-font-smoothing: antialiased
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: inherit
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        figure {
+            margin: 0
+        }
+
+        body,
+        input,
+        textarea,
+        select,
+        button {
+            font-size: 12px;
+            font-family: sans-serif
+        }
+
+        @font-face {
+            font-family: Space Grotesk;
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-family: Space Grotesk;
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2) format("woff2");
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: Space Grotesk;
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: Space Grotesk;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-family: Space Grotesk;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2) format("woff2");
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: Space Grotesk;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: Unbounded;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/unbounded/v7/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG6__244fNgc6L.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-family: Unbounded;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/unbounded/v7/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG6__2447Ngc6L.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-family: Unbounded;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/unbounded/v7/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG6__244XNgc6L.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-family: Unbounded;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/unbounded/v7/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG6__244TNgc6L.woff2) format("woff2");
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: Unbounded;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/unbounded/v7/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG6__244rNgQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: Space Grotesk Placeholder;
+            ascent-override: 88.75%;
+            descent-override: 26.34%;
+            line-gap-override: 0%;
+            size-adjust: 110.87%;
+            src: local("Arial")
+        }
+
+        @font-face {
+            font-family: Inter Placeholder;
+            ascent-override: 90%;
+            descent-override: 22.43%;
+            line-gap-override: 0%;
+            size-adjust: 107.64%;
+            src: local("Arial")
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-Thin.cyrillic-ext-BHDA65O4.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-Thin.cyrillic-Q5IXHU2O.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-Thin.greek-ext-VVOQA2NE.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-Thin.greek-E3WNEUH6.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-Thin.latin-ext-5RC4NRHN.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-Thin.latin-GJ7CRGHG.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-Thin.vietnamese-Z3Y7DPWO.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLight.cyrillic-ext-7NWKXNAT.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLight.cyrillic-IBWUD6RJ.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLight.greek-ext-HUMDTRBU.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLight.greek-ZLLHEEN3.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLight.latin-ext-72JE5FGU.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLight.latin-2JHDAFAQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLight.vietnamese-VKRCA4VC.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-Light.cyrillic-ext-G3OTPKE4.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-Light.cyrillic-JO7ZJTP6.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-Light.greek-ext-N63XCCK3.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-Light.greek-5GVUXSXZ.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-Light.latin-ext-RREJIMQ3.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-Light.latin-EKF76FXR.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-Light.vietnamese-GVC2UOFS.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Regular.cyrillic-ext-CFTLRB35.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Regular.cyrillic-KKLZBALH.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Regular.greek-ext-ULEBLIFV.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Regular.greek-IRHSNFQB.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Regular.latin-ext-VZDUGU3Q.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Regular.latin-JLQMKCHE.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Regular.vietnamese-QK7VSWXK.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-Medium.cyrillic-ext-M4WHNGTS.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-Medium.cyrillic-JVU2PANX.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-Medium.greek-ext-4KCQBEIZ.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-Medium.greek-DPOQGN7L.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-Medium.latin-ext-J4DBSW7F.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-Medium.latin-Y3IVPL46.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-Medium.vietnamese-PJV76O4P.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBold.cyrillic-ext-C7KWUKA7.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBold.cyrillic-JWV7SOZ6.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBold.greek-ext-FBKSFTSU.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBold.greek-EQ3PSENU.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBold.latin-ext-ULRSO3ZR.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBold.latin-RDYY2AG2.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBold.vietnamese-ESQNSEQ3.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-Bold.cyrillic-ext-XOTVL7ZR.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-Bold.cyrillic-6LOMBC2V.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-Bold.greek-ext-WXWSJXLB.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-Bold.greek-YRST7ODZ.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-Bold.latin-ext-BASA5UL3.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-Bold.latin-UCM45LQF.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-Bold.vietnamese-OEVJMXEP.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBold.cyrillic-ext-7Q6SVIPE.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBold.cyrillic-JSLPE6KW.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBold.greek-ext-6OYGJJV7.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBold.greek-SHW2FPC4.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBold.latin-ext-A5DUFOP6.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBold.latin-OW4UGSRU.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBold.vietnamese-IBBC7NGV.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-Black.cyrillic-ext-TU4ITVTR.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-Black.cyrillic-JX7CGTYD.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-Black.greek-ext-LS3GCBFI.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-Black.greek-ZWCJHBP5.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-Black.latin-ext-BZLEUMX6.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-Black.latin-TETRYDF7.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-Black.vietnamese-RXQCC3EJ.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-ThinItalic.cyrillic-ext-2RGKWUBV.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-ThinItalic.cyrillic-TDYIP5HV.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-ThinItalic.greek-ext-WR4TIDYZ.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-ThinItalic.greek-V3WZMSP7.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-ThinItalic.latin-ext-TXFTJONQ.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-ThinItalic.latin-RVEBKP6O.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 100;
+            src: url(https://app.framerstatic.com/Inter-ThinItalic.vietnamese-WCBPP4MD.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.cyrillic-ext-OVCHMVPD.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.cyrillic-BRDZE5UH.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.greek-ext-YV64YFFH.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.greek-EJVCLASM.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.latin-ext-2MHTM56A.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.latin-JB3CJMMM.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 200;
+            src: url(https://app.framerstatic.com/Inter-ExtraLightItalic.vietnamese-3EJ3IQYS.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-LightItalic.cyrillic-ext-C2S5XS3D.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-LightItalic.cyrillic-E7CYPW5D.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-LightItalic.greek-ext-ROSAFPGE.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-LightItalic.greek-PAWWH37Z.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-LightItalic.latin-ext-N2Z67Z45.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-LightItalic.latin-SLSTLWEU.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 300;
+            src: url(https://app.framerstatic.com/Inter-LightItalic.vietnamese-RLGM2D3Y.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Italic.cyrillic-ext-YDGMJOJO.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Italic.cyrillic-BFOVMAQB.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Italic.greek-ext-4KOU3AHC.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Italic.greek-OJTBJNE6.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Italic.latin-ext-H4B22QN6.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Italic.latin-2DWX32EN.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 400;
+            src: url(https://app.framerstatic.com/Inter-Italic.vietnamese-TYMT6CKW.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-MediumItalic.cyrillic-ext-QYBZQ2NF.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-MediumItalic.cyrillic-ZHAJHZCC.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-MediumItalic.greek-ext-W5ABYGZR.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-MediumItalic.greek-RGNSYVNV.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-MediumItalic.latin-ext-7DZEPSAS.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-MediumItalic.latin-SKPQAMBJ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 500;
+            src: url(https://app.framerstatic.com/Inter-MediumItalic.vietnamese-23WIFZV7.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.cyrillic-ext-MEHHCDC3.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.cyrillic-YACNRNDE.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.greek-ext-GFL7KADI.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.greek-5W77OPRT.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.latin-ext-OYJJ2W6R.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.latin-KBLJMBDH.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 600;
+            src: url(https://app.framerstatic.com/Inter-SemiBoldItalic.vietnamese-5ZFOV65G.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-BoldItalic.cyrillic-ext-PEYDHC3S.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-BoldItalic.cyrillic-7EIL6JWG.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-BoldItalic.greek-ext-3DJOYQMH.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-BoldItalic.greek-TJBTLTT7.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-BoldItalic.latin-ext-FVPCPRBJ.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-BoldItalic.latin-5ZFQS4XK.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 700;
+            src: url(https://app.framerstatic.com/Inter-BoldItalic.vietnamese-W2625PGF.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.cyrillic-ext-ACWDZ3VD.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.cyrillic-ZKBSDAI2.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.greek-ext-3CY5DPTP.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.greek-YL5CC63W.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.latin-ext-7IZFJI4D.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.latin-O5HH4IX3.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 800;
+            src: url(https://app.framerstatic.com/Inter-ExtraBoldItalic.vietnamese-UW3XUJOD.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-BlackItalic.cyrillic-ext-TRM4ITYR.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-BlackItalic.cyrillic-FPHIQVZS.woff2) format("woff2");
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-BlackItalic.greek-ext-JTGUUSP5.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-BlackItalic.greek-LUNA3RFO.woff2) format("woff2");
+            unicode-range: U+0370-03FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-BlackItalic.latin-ext-KU7ICFYH.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-BlackItalic.latin-FRVXWQSB.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-display: block;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 900;
+            src: url(https://app.framerstatic.com/Inter-BlackItalic.vietnamese-2Q7MQKJX.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+        }
+
+        [data-framer-component-type] {
+            position: absolute
+        }
+
+        [data-framer-component-type=Text] {
+            cursor: inherit
+        }
+
+        [data-framer-component-text-autosized] * {
+            white-space: pre
+        }
+
+        [data-framer-component-type=Text]>* {
+            text-align: var(--framer-text-alignment, start)
+        }
+
+        [data-framer-component-type=Text] span span,
+        [data-framer-component-type=Text] p span,
+        [data-framer-component-type=Text] h1 span,
+        [data-framer-component-type=Text] h2 span,
+        [data-framer-component-type=Text] h3 span,
+        [data-framer-component-type=Text] h4 span,
+        [data-framer-component-type=Text] h5 span,
+        [data-framer-component-type=Text] h6 span {
+            display: block
+        }
+
+        [data-framer-component-type=Text] span span span,
+        [data-framer-component-type=Text] p span span,
+        [data-framer-component-type=Text] h1 span span,
+        [data-framer-component-type=Text] h2 span span,
+        [data-framer-component-type=Text] h3 span span,
+        [data-framer-component-type=Text] h4 span span,
+        [data-framer-component-type=Text] h5 span span,
+        [data-framer-component-type=Text] h6 span span {
+            display: unset
+        }
+
+        [data-framer-component-type=Text] div div span,
+        [data-framer-component-type=Text] a div span,
+        [data-framer-component-type=Text] span span span,
+        [data-framer-component-type=Text] p span span,
+        [data-framer-component-type=Text] h1 span span,
+        [data-framer-component-type=Text] h2 span span,
+        [data-framer-component-type=Text] h3 span span,
+        [data-framer-component-type=Text] h4 span span,
+        [data-framer-component-type=Text] h5 span span,
+        [data-framer-component-type=Text] h6 span span,
+        [data-framer-component-type=Text] a {
+            font-family: var(--font-family);
+            font-style: var(--font-style);
+            font-weight: min(calc(var(--framer-font-weight-increase, 0) + var(--font-weight, 400)), 900);
+            color: var(--text-color);
+            letter-spacing: var(--letter-spacing);
+            font-size: var(--font-size);
+            text-transform: var(--text-transform);
+            text-decoration: var(--text-decoration);
+            line-height: var(--line-height)
+        }
+
+        [data-framer-component-type=Text] div div span,
+        [data-framer-component-type=Text] a div span,
+        [data-framer-component-type=Text] span span span,
+        [data-framer-component-type=Text] p span span,
+        [data-framer-component-type=Text] h1 span span,
+        [data-framer-component-type=Text] h2 span span,
+        [data-framer-component-type=Text] h3 span span,
+        [data-framer-component-type=Text] h4 span span,
+        [data-framer-component-type=Text] h5 span span,
+        [data-framer-component-type=Text] h6 span span,
+        [data-framer-component-type=Text] a {
+            --font-family: var(--framer-font-family);
+            --font-style: var(--framer-font-style);
+            --font-weight: var(--framer-font-weight);
+            --text-color: var(--framer-text-color);
+            --letter-spacing: var(--framer-letter-spacing);
+            --font-size: var(--framer-font-size);
+            --text-transform: var(--framer-text-transform);
+            --text-decoration: var(--framer-text-decoration);
+            --line-height: var(--framer-line-height)
+        }
+
+        [data-framer-component-type=Text] a,
+        [data-framer-component-type=Text] a div span,
+        [data-framer-component-type=Text] a span span span,
+        [data-framer-component-type=Text] a p span span,
+        [data-framer-component-type=Text] a h1 span span,
+        [data-framer-component-type=Text] a h2 span span,
+        [data-framer-component-type=Text] a h3 span span,
+        [data-framer-component-type=Text] a h4 span span,
+        [data-framer-component-type=Text] a h5 span span,
+        [data-framer-component-type=Text] a h6 span span {
+            --font-family: var(--framer-link-font-family, var(--framer-font-family));
+            --font-style: var(--framer-link-font-style, var(--framer-font-style));
+            --font-weight: var(--framer-link-font-weight, var(--framer-font-weight));
+            --text-color: var(--framer-link-text-color, var(--framer-text-color));
+            --font-size: var(--framer-link-font-size, var(--framer-font-size));
+            --text-transform: var(--framer-link-text-transform, var(--framer-text-transform));
+            --text-decoration: var(--framer-link-text-decoration, var(--framer-text-decoration))
+        }
+
+        [data-framer-component-type=Text] a:hover,
+        [data-framer-component-type=Text] a div span:hover,
+        [data-framer-component-type=Text] a span span span:hover,
+        [data-framer-component-type=Text] a p span span:hover,
+        [data-framer-component-type=Text] a h1 span span:hover,
+        [data-framer-component-type=Text] a h2 span span:hover,
+        [data-framer-component-type=Text] a h3 span span:hover,
+        [data-framer-component-type=Text] a h4 span span:hover,
+        [data-framer-component-type=Text] a h5 span span:hover,
+        [data-framer-component-type=Text] a h6 span span:hover {
+            --font-family: var(--framer-link-hover-font-family, var(--framer-link-font-family, var(--framer-font-family)));
+            --font-style: var(--framer-link-hover-font-style, var(--framer-link-font-style, var(--framer-font-style)));
+            --font-weight: var(--framer-link-hover-font-weight, var(--framer-link-font-weight, var(--framer-font-weight)));
+            --text-color: var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-text-color)));
+            --font-size: var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size)));
+            --text-transform: var(--framer-link-hover-text-transform, var(--framer-link-text-transform, var(--framer-text-transform)));
+            --text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration)))
+        }
+
+        [data-framer-component-type=Text].isCurrent a,
+        [data-framer-component-type=Text].isCurrent a div span,
+        [data-framer-component-type=Text].isCurrent a span span span,
+        [data-framer-component-type=Text].isCurrent a p span span,
+        [data-framer-component-type=Text].isCurrent a h1 span span,
+        [data-framer-component-type=Text].isCurrent a h2 span span,
+        [data-framer-component-type=Text].isCurrent a h3 span span,
+        [data-framer-component-type=Text].isCurrent a h4 span span,
+        [data-framer-component-type=Text].isCurrent a h5 span span,
+        [data-framer-component-type=Text].isCurrent a h6 span span {
+            --font-family: var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family)));
+            --font-style: var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style)));
+            --font-weight: var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight)));
+            --text-color: var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color)));
+            --font-size: var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size)));
+            --text-transform: var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform)));
+            --text-decoration: var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration)))
+        }
+
+        p.framer-text,
+        div.framer-text,
+        h1.framer-text,
+        h2.framer-text,
+        h3.framer-text,
+        h4.framer-text,
+        h5.framer-text,
+        h6.framer-text,
+        ol.framer-text,
+        ul.framer-text {
+            margin: 0;
+            padding: 0
+        }
+
+        p.framer-text,
+        div.framer-text,
+        h1.framer-text,
+        h2.framer-text,
+        h3.framer-text,
+        h4.framer-text,
+        h5.framer-text,
+        h6.framer-text,
+        li.framer-text,
+        ol.framer-text,
+        ul.framer-text,
+        span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-font-family, Inter, Inter Placeholder, sans-serif);
+            font-style: var(--framer-font-style, normal);
+            font-weight: var(--framer-font-weight, 400);
+            color: var(--framer-text-color, #000);
+            font-size: calc(var(--framer-font-size, 16px) * var(--framer-font-size-scale, 1));
+            letter-spacing: var(--framer-letter-spacing, 0);
+            text-transform: var(--framer-text-transform, none);
+            text-decoration: var(--framer-text-decoration, none);
+            line-height: var(--framer-line-height, 1.2em);
+            text-align: var(--framer-text-alignment, start)
+        }
+
+        strong.framer-text {
+            font-family: var(--framer-font-family-bold);
+            font-style: var(--framer-font-style-bold);
+            font-weight: var(--framer-font-weight-bold, bolder)
+        }
+
+        em.framer-text {
+            font-family: var(--framer-font-family-italic);
+            font-style: var(--framer-font-style-italic, italic);
+            font-weight: var(--framer-font-weight-italic)
+        }
+
+        em.framer-text>strong.framer-text {
+            font-family: var(--framer-font-family-bold-italic);
+            font-style: var(--framer-font-style-bold-italic, italic);
+            font-weight: var(--framer-font-weight-bold-italic, bolder)
+        }
+
+        p.framer-text:not(:first-child),
+        div.framer-text:not(:first-child),
+        h1.framer-text:not(:first-child),
+        h2.framer-text:not(:first-child),
+        h3.framer-text:not(:first-child),
+        h4.framer-text:not(:first-child),
+        h5.framer-text:not(:first-child),
+        h6.framer-text:not(:first-child),
+        ol.framer-text:not(:first-child),
+        ul.framer-text:not(:first-child),
+        .framer-image.framer-text:not(:first-child) {
+            margin-top: var(--framer-paragraph-spacing, 0)
+        }
+
+        li.framer-text>ul.framer-text:nth-child(2),
+        li.framer-text>ol.framer-text:nth-child(2) {
+            margin-top: 0
+        }
+
+        .framer-text[data-text-fill] {
+            display: inline-block;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: max(0em, calc(calc(1.3em - var(--framer-line-height, 1.3em)) / 2));
+            margin: min(0em, calc(calc(1.3em - var(--framer-line-height, 1.3em)) / -2))
+        }
+
+        code.framer-text,
+        code.framer-text span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+            font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+            font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+            color: var(--framer-code-text-color, var(--framer-text-color, #000));
+            font-size: calc(var(--framer-font-size, 16px) * var(--framer-font-size-scale, 1));
+            letter-spacing: var(--framer-letter-spacing, 0);
+            line-height: var(--framer-line-height, 1.2em)
+        }
+
+        a.framer-text,
+        a.framer-text span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+            font-style: var(--framer-link-font-style, var(--framer-font-style, normal));
+            font-weight: var(--framer-link-font-weight, var(--framer-font-weight, 400));
+            color: var(--framer-link-text-color, var(--framer-text-color, #000));
+            font-size: calc(var(--framer-link-font-size, var(--framer-font-size, 16px)) * var(--framer-font-size-scale, 1));
+            text-transform: var(--framer-link-text-transform, var(--framer-text-transform, none));
+            text-decoration: var(--framer-link-text-decoration, var(--framer-text-decoration, none));
+            cursor: var(--framer-custom-cursors, pointer)
+        }
+
+        code.framer-text a.framer-text,
+        code.framer-text a.framer-text span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+            font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+            font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+            color: var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000)));
+            font-size: calc(var(--framer-link-font-size, var(--framer-font-size, 16px)) * var(--framer-font-size-scale, 1))
+        }
+
+        a.framer-text:hover,
+        a.framer-text:hover span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-link-hover-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));
+            font-style: var(--framer-link-hover-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));
+            font-weight: var(--framer-link-hover-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));
+            color: var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));
+            font-size: calc(var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1));
+            text-transform: var(--framer-link-hover-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));
+            text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)))
+        }
+
+        code.framer-text a.framer-text:hover,
+        code.framer-text a.framer-text:hover span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+            font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+            font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+            color: var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000))));
+            font-size: calc(var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1))
+        }
+
+        a.framer-text[data-framer-page-link-current],
+        a.framer-text[data-framer-page-link-current] span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));
+            font-style: var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));
+            font-weight: var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));
+            color: var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));
+            font-size: calc(var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1));
+            text-transform: var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));
+            text-decoration: var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)))
+        }
+
+        code.framer-text a.framer-text[data-framer-page-link-current],
+        code.framer-text a.framer-text[data-framer-page-link-current] span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+            font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+            font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+            color: var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000))));
+            font-size: calc(var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1))
+        }
+
+        a.framer-text[data-framer-page-link-current]:hover,
+        a.framer-text[data-framer-page-link-current]:hover span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-link-hover-font-family, var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif))));
+            font-style: var(--framer-link-hover-font-style, var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal))));
+            font-weight: var(--framer-link-hover-font-weight, var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400))));
+            color: var(--framer-link-hover-text-color, var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000))));
+            font-size: calc(var(--framer-link-hover-font-size, var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)))) * var(--framer-font-size-scale, 1));
+            text-transform: var(--framer-link-hover-text-transform, var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none))));
+            text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none))))
+        }
+
+        code.framer-text a.framer-text[data-framer-page-link-current]:hover,
+        code.framer-text a.framer-text[data-framer-page-link-current]:hover span.framer-text:not([data-text-fill]) {
+            font-family: var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+            font-style: var(--framer-code-font-style, var(--framer-font-style, normal));
+            font-weight: var(--framer-code-font-weight, var(--framer-font-weight, 400));
+            color: var(--framer-link-hover-text-color, var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000)))));
+            font-size: calc(var(--framer-link-hover-font-size, var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)))) * var(--framer-font-size-scale, 1))
+        }
+
+        .framer-image.framer-text {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        .text-styles-preset-reset.framer-text {
+            --framer-font-family: Inter, Inter Placeholder, sans-serif;
+            --framer-font-style: normal;
+            --framer-font-weight: 500;
+            --framer-text-color: #000;
+            --framer-font-size: 16px;
+            --framer-letter-spacing: 0;
+            --framer-text-transform: none;
+            --framer-text-decoration: none;
+            --framer-line-height: 1.2em;
+            --framer-text-alignment: start
+        }
+
+        ul.framer-text,
+        ol.framer-text {
+            display: table;
+            width: 100%
+        }
+
+        li.framer-text {
+            display: table-row;
+            counter-increment: list-item;
+            list-style: none
+        }
+
+        ol.framer-text>li.framer-text:before {
+            display: table-cell;
+            width: 2.25ch;
+            box-sizing: border-box;
+            padding-inline-end: .75ch;
+            content: counter(list-item) ".";
+            white-space: nowrap
+        }
+
+        ul.framer-text>li.framer-text:before {
+            display: table-cell;
+            width: 2.25ch;
+            box-sizing: border-box;
+            padding-inline-end: .75ch;
+            content: "\2022"
+        }
+
+        .framer-text-module[style*=aspect-ratio]>:first-child {
+            width: 100%
+        }
+
+        @supports not (aspect-ratio: 1) {
+            .framer-text-module[style*=aspect-ratio] {
+                position: relative
+            }
+        }
+
+        @supports not (aspect-ratio: 1) {
+            .framer-text-module[style*=aspect-ratio]:before {
+                content: "";
+                display: block;
+                padding-bottom: calc(100% / calc(var(--aspect-ratio)))
+            }
+        }
+
+        @supports not (aspect-ratio: 1) {
+            .framer-text-module[style*=aspect-ratio]>:first-child {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%
+            }
+        }
+
+        [data-framer-component-type=DeprecatedRichText] {
+            cursor: inherit
+        }
+
+        [data-framer-component-type=DeprecatedRichText] .text-styles-preset-reset {
+            --framer-font-family: Inter, Inter Placeholder, sans-serif;
+            --framer-font-style: normal;
+            --framer-font-weight: 500;
+            --framer-text-color: #000;
+            --framer-font-size: 16px;
+            --framer-letter-spacing: 0;
+            --framer-text-transform: none;
+            --framer-text-decoration: none;
+            --framer-line-height: 1.2em;
+            --framer-text-alignment: start
+        }
+
+        [data-framer-component-type=DeprecatedRichText] p,
+        [data-framer-component-type=DeprecatedRichText] div,
+        [data-framer-component-type=DeprecatedRichText] h1,
+        [data-framer-component-type=DeprecatedRichText] h2,
+        [data-framer-component-type=DeprecatedRichText] h3,
+        [data-framer-component-type=DeprecatedRichText] h4,
+        [data-framer-component-type=DeprecatedRichText] h5,
+        [data-framer-component-type=DeprecatedRichText] h6 {
+            margin: 0;
+            padding: 0
+        }
+
+        [data-framer-component-type=DeprecatedRichText] p,
+        [data-framer-component-type=DeprecatedRichText] div,
+        [data-framer-component-type=DeprecatedRichText] h1,
+        [data-framer-component-type=DeprecatedRichText] h2,
+        [data-framer-component-type=DeprecatedRichText] h3,
+        [data-framer-component-type=DeprecatedRichText] h4,
+        [data-framer-component-type=DeprecatedRichText] h5,
+        [data-framer-component-type=DeprecatedRichText] h6,
+        [data-framer-component-type=DeprecatedRichText] li,
+        [data-framer-component-type=DeprecatedRichText] ol,
+        [data-framer-component-type=DeprecatedRichText] ul,
+        [data-framer-component-type=DeprecatedRichText] span:not([data-text-fill]) {
+            font-family: var(--framer-font-family, Inter, Inter Placeholder, sans-serif);
+            font-style: var(--framer-font-style, normal);
+            font-weight: var(--framer-font-weight, 400);
+            color: var(--framer-text-color, #000);
+            font-size: var(--framer-font-size, 16px);
+            letter-spacing: var(--framer-letter-spacing, 0);
+            text-transform: var(--framer-text-transform, none);
+            text-decoration: var(--framer-text-decoration, none);
+            line-height: var(--framer-line-height, 1.2em);
+            text-align: var(--framer-text-alignment, start)
+        }
+
+        [data-framer-component-type=DeprecatedRichText] p:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] div:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] h1:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] h2:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] h3:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] h4:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] h5:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] h6:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] ol:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] ul:not(:first-child),
+        [data-framer-component-type=DeprecatedRichText] .framer-image:not(:first-child) {
+            margin-top: var(--framer-paragraph-spacing, 0)
+        }
+
+        [data-framer-component-type=DeprecatedRichText] span[data-text-fill] {
+            display: inline-block;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent
+        }
+
+        [data-framer-component-type=DeprecatedRichText] a,
+        [data-framer-component-type=DeprecatedRichText] a span:not([data-text-fill]) {
+            font-family: var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));
+            font-style: var(--framer-link-font-style, var(--framer-font-style, normal));
+            font-weight: var(--framer-link-font-weight, var(--framer-font-weight, 400));
+            color: var(--framer-link-text-color, var(--framer-text-color, #000));
+            font-size: var(--framer-link-font-size, var(--framer-font-size, 16px));
+            text-transform: var(--framer-link-text-transform, var(--framer-text-transform, none));
+            text-decoration: var(--framer-link-text-decoration, var(--framer-text-decoration, none))
+        }
+
+        [data-framer-component-type=DeprecatedRichText] a:hover,
+        [data-framer-component-type=DeprecatedRichText] a:hover span:not([data-text-fill]) {
+            font-family: var(--framer-link-hover-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));
+            font-style: var(--framer-link-hover-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));
+            font-weight: var(--framer-link-hover-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));
+            color: var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));
+            font-size: var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)));
+            text-transform: var(--framer-link-hover-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));
+            text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)))
+        }
+
+        a[data-framer-page-link-current],
+        a[data-framer-page-link-current] span:not([data-text-fill]) {
+            font-family: var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));
+            font-style: var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));
+            font-weight: var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));
+            color: var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));
+            font-size: var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)));
+            text-transform: var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));
+            text-decoration: var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)))
+        }
+
+        a[data-framer-page-link-current]:hover,
+        a[data-framer-page-link-current]:hover span:not([data-text-fill]) {
+            font-family: var(--framer-link-hover-font-family, var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif))));
+            font-style: var(--framer-link-hover-font-style, var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal))));
+            font-weight: var(--framer-link-hover-font-weight, var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400))));
+            color: var(--framer-link-hover-text-color, var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000))));
+            font-size: var(--framer-link-hover-font-size, var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))));
+            text-transform: var(--framer-link-hover-text-transform, var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none))));
+            text-decoration: var(--framer-link-hover-text-decoration, var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none))))
+        }
+
+        [data-framer-component-type=DeprecatedRichText] strong {
+            font-weight: bolder
+        }
+
+        [data-framer-component-type=DeprecatedRichText] em {
+            font-style: italic
+        }
+
+        [data-framer-component-type=DeprecatedRichText] .framer-image {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        [data-framer-component-type=DeprecatedRichText] ul,
+        [data-framer-component-type=DeprecatedRichText] ol {
+            display: table;
+            width: 100%;
+            padding-left: 0;
+            margin: 0
+        }
+
+        [data-framer-component-type=DeprecatedRichText] li {
+            display: table-row;
+            counter-increment: list-item;
+            list-style: none
+        }
+
+        [data-framer-component-type=DeprecatedRichText] ol>li:before {
+            display: table-cell;
+            width: 2.25ch;
+            box-sizing: border-box;
+            padding-right: .75ch;
+            content: counter(list-item) ".";
+            white-space: nowrap
+        }
+
+        [data-framer-component-type=DeprecatedRichText] ul>li:before {
+            display: table-cell;
+            width: 2.25ch;
+            box-sizing: border-box;
+            padding-right: .75ch;
+            content: "\2022"
+        }
+
+        :not([data-framer-generated])>[data-framer-stack-content-wrapper]>*,
+        :not([data-framer-generated])>[data-framer-stack-content-wrapper]>[data-framer-component-type],
+        :not([data-framer-generated])>[data-framer-stack-content-wrapper]>[data-framer-legacy-stack-gap-enabled]>*,
+        :not([data-framer-generated])>[data-framer-stack-content-wrapper]>[data-framer-legacy-stack-gap-enabled]>[data-framer-component-type] {
+            position: relative
+        }
+
+        .flexbox-gap-not-supported [data-framer-legacy-stack-gap-enabled=true]>*,
+        [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false] {
+            margin-top: calc(var(--stack-gap-y) / 2);
+            margin-bottom: calc(var(--stack-gap-y) / 2);
+            margin-right: calc(var(--stack-gap-x) / 2);
+            margin-left: calc(var(--stack-gap-x) / 2)
+        }
+
+        [data-framer-stack-content-wrapper][data-framer-stack-gap-enabled=true] {
+            row-gap: var(--stack-native-row-gap);
+            column-gap: var(--stack-native-column-gap)
+        }
+
+        .flexbox-gap-not-supported [data-framer-stack-content-wrapper][data-framer-stack-gap-enabled=true] {
+            row-gap: unset;
+            column-gap: unset
+        }
+
+        .flexbox-gap-not-supported [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true]>*:first-child,
+        [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false]>*:first-child,
+        .flexbox-gap-not-supported [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true]>*:last-child,
+        [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false]>*:last-child {
+            margin-top: 0;
+            margin-left: 0
+        }
+
+        .flexbox-gap-not-supported [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true]>*:last-child,
+        [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false]>*:last-child,
+        .flexbox-gap-not-supported [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true]>*:first-child,
+        [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false]>*:first-child {
+            margin-right: 0;
+            margin-bottom: 0
+        }
+
+        NavigationContainer [data-framer-component-type=NavigationContainer]>*,
+        [data-framer-component-type=NavigationContainer]>[data-framer-component-type] {
+            position: relative
+        }
+
+        [data-framer-component-type=Scroll]::-webkit-scrollbar {
+            display: none
+        }
+
+        [data-framer-component-type=ScrollContentWrapper]>* {
+            position: relative
+        }
+
+        [data-framer-component-type=NativeScroll] {
+            -webkit-overflow-scrolling: touch
+        }
+
+        [data-framer-component-type=NativeScroll]>* {
+            position: relative
+        }
+
+        [data-framer-component-type=NativeScroll].direction-both {
+            overflow-x: scroll;
+            overflow-y: scroll
+        }
+
+        [data-framer-component-type=NativeScroll].direction-vertical {
+            overflow-x: hidden;
+            overflow-y: scroll
+        }
+
+        [data-framer-component-type=NativeScroll].direction-horizontal {
+            overflow-x: scroll;
+            overflow-y: hidden
+        }
+
+        [data-framer-component-type=NativeScroll].direction-vertical>* {
+            width: 100% !important
+        }
+
+        [data-framer-component-type=NativeScroll].direction-horizontal>* {
+            height: 100% !important
+        }
+
+        [data-framer-component-type=NativeScroll].scrollbar-hidden::-webkit-scrollbar {
+            display: none
+        }
+
+        [data-framer-component-type=PageContentWrapper]>*,
+        [data-framer-component-type=PageContentWrapper]>[data-framer-component-type] {
+            position: relative
+        }
+
+        [data-framer-component-type=DeviceComponent].no-device>* {
+            width: 100% !important;
+            height: 100% !important
+        }
+
+        [data-is-present=false],
+        [data-is-present=false] * {
+            pointer-events: none !important
+        }
+
+        [data-framer-cursor=pointer] {
+            cursor: pointer
+        }
+
+        [data-framer-cursor=grab] {
+            cursor: grab
+        }
+
+        [data-framer-cursor=grab]:active {
+            cursor: grabbing
+        }
+
+        [data-framer-component-type=Frame] *,
+        [data-framer-component-type=Stack] * {
+            pointer-events: auto
+        }
+
+        [data-framer-generated] * {
+            pointer-events: unset
+        }
+
+        .svgContainer svg {
+            display: block
+        }
+
+        [data-reset=button] {
+            border-width: 0;
+            padding: 0;
+            background: none
+        }
+
+        [data-hide-scrollbars=true]::-webkit-scrollbar {
+            width: 0px;
+            height: 0px
+        }
+
+        [data-hide-scrollbars=true]::-webkit-scrollbar-thumb {
+            background: transparent
+        }
+
+        .framer-0OTfK [data-border=true]:after {
+            content: "";
+            border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
+            border-color: var(--border-color, none);
+            border-style: var(--border-style, none);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            border-radius: inherit;
+            pointer-events: none
+        }
+
+        @supports (aspect-ratio: 1) {
+            body {
+                --framer-aspect-ratio-supported: auto
+            }
+        }
+
+        .framer-body-augiA20Il {
+            background: #061A40
+        }
+
+        .framer-0OTfK .framer-lux5qc {
+            display: block
+        }
+
+        .framer-0OTfK .framer-72rtr7 {
+            align-content: center;
+            align-items: center;
+            background-color: #061a40;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 0px;
+            height: min-content;
+            justify-content: flex-start;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 1200px
+        }
+
+        .framer-0OTfK .framer-64f1t2 {
+            align-content: center;
+            align-items: center;
+            background-color: #061a40;
+            display: flex;
+            flex: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 10px;
+            height: 800px;
+            justify-content: center;
+            overflow: hidden;
+            padding: 100px 50px;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-1nj27gv {
+            align-content: center;
+            align-items: center;
+            display: flex;
+            flex: 1 0 0px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 174px;
+            height: 100%;
+            justify-content: flex-start;
+            max-width: 1000px;
+            overflow: visible;
+            padding: 0;
+            position: relative;
+            width: 1px;
+            z-index: 5
+        }
+
+        .framer-0OTfK .framer-8u398o {
+            align-content: center;
+            align-items: center;
+            display: flex;
+            flex: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 60px;
+            height: min-content;
+            justify-content: center;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-13gm2kw,
+        .framer-0OTfK .framer-11it4vu,
+        .framer-0OTfK .framer-1vuhyfi,
+        .framer-0OTfK .framer-jpaq4z {
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            position: relative;
+            white-space: pre;
+            width: auto;
+            z-index: 1
+        }
+
+        .framer-0OTfK .framer-1fwgq4i {
+            align-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            display: flex;
+            flex: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 10px;
+            height: 40px;
+            justify-content: center;
+            overflow: visible;
+            padding: 15px;
+            position: relative;
+            width: min-content
+        }
+
+        .framer-0OTfK .framer-jf0afv,
+        .framer-0OTfK .framer-1rh8iaf {
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            position: relative;
+            white-space: pre;
+            width: auto
+        }
+
+        .framer-0OTfK .framer-14ojsaf {
+            --framer-link-text-color: #0099ff;
+            --framer-link-text-decoration: underline;
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            position: relative;
+            white-space: pre-wrap;
+            width: 100%;
+            word-break: break-word;
+            word-wrap: break-word;
+            z-index: 1
+        }
+
+        .framer-0OTfK .framer-17o0hgk-container {
+            flex: none;
+            height: 100px;
+            left: calc(89.00000000000003% - 100px / 2);
+            position: absolute;
+            top: calc(23.16666666666669% - 100px / 2);
+            width: 100px;
+            z-index: -1
+        }
+
+        .framer-0OTfK .framer-1g2b9fy-container {
+            bottom: 22px;
+            flex: none;
+            height: 100px;
+            left: 65px;
+            position: absolute;
+            width: 100px;
+            z-index: -1
+        }
+
+        .framer-0OTfK .framer-5cnglt-container {
+            bottom: 51px;
+            flex: none;
+            height: 100px;
+            left: 805px;
+            position: absolute;
+            width: 100px;
+            z-index: -1
+        }
+
+        .framer-0OTfK .framer-xipz4v-container {
+            flex: none;
+            height: 100px;
+            left: 239px;
+            position: absolute;
+            top: 89px;
+            width: 100px;
+            z-index: -1
+        }
+
+        .framer-0OTfK .framer-13xutd {
+            align-content: center;
+            align-items: center;
+            background-color: #061a40;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 0px;
+            height: min-content;
+            justify-content: flex-start;
+            overflow: hidden;
+            padding: 100px;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-ql8ksj {
+            align-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 40px;
+            height: min-content;
+            justify-content: flex-start;
+            max-width: 1000px;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            z-index: 1
+        }
+
+        .framer-0OTfK .framer-1pha84p {
+            align-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex: 1 0 0px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 10px;
+            height: min-content;
+            justify-content: flex-start;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 1px
+        }
+
+        .framer-0OTfK .framer-1xmirr5 {
+            -webkit-filter: grayscale(0);
+            aspect-ratio: 1 / 1;
+            border-radius: 100px;
+            filter: grayscale(0);
+            flex: none;
+            height: var(--framer-aspect-ratio-supported, 478px);
+            overflow: hidden;
+            position: relative;
+            width: 478px;
+            will-change: var(--framer-will-change-override, transform)
+        }
+
+        .framer-0OTfK .framer-1mta33s {
+            align-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex: 1 0 0px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 20px;
+            height: 484px;
+            justify-content: flex-start;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 1px
+        }
+
+        .framer-0OTfK .framer-1tkavfn {
+            --framer-link-text-color: #0099ff;
+            --framer-link-text-decoration: underline;
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: 58px;
+            overflow: visible;
+            position: relative;
+            white-space: pre-wrap;
+            width: 480px;
+            word-break: break-word;
+            word-wrap: break-word
+        }
+
+        .framer-0OTfK .framer-fqydua {
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: 404px;
+            overflow: visible;
+            position: relative;
+            white-space: pre-wrap;
+            width: 480px;
+            word-break: break-word;
+            word-wrap: break-word
+        }
+
+        .framer-0OTfK .framer-136w9f {
+            align-content: center;
+            align-items: center;
+            background-color: #061a40;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 60px;
+            height: min-content;
+            justify-content: center;
+            overflow: hidden;
+            padding: 100px;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-61jfsv {
+            align-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 20px;
+            height: min-content;
+            justify-content: center;
+            max-width: 1000px;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-t5vdev-container {
+            flex: none;
+            height: 100px;
+            position: relative;
+            width: 100px
+        }
+
+        .framer-0OTfK .framer-c208ut {
+            --framer-link-text-color: #0099ff;
+            --framer-link-text-decoration: underline;
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            max-width: 1000px;
+            overflow: visible;
+            position: relative;
+            white-space: pre-wrap;
+            width: 100%;
+            word-break: break-word;
+            word-wrap: break-word
+        }
+
+        .framer-0OTfK .framer-lms3jt {
+            display: grid;
+            flex: none;
+            gap: 40px;
+            grid-auto-rows: min-content;
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            grid-template-rows: repeat(2, min-content);
+            height: min-content;
+            justify-content: center;
+            max-width: 1000px;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-1uemalu,
+        .framer-0OTfK .framer-1ya84r9,
+        .framer-0OTfK .framer-26rkvc,
+        .framer-0OTfK .framer-l3o10m,
+        .framer-0OTfK .framer-164tptc,
+        .framer-0OTfK .framer-u998ha {
+            align-content: flex-start;
+            align-items: flex-start;
+            align-self: start;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 10px;
+            height: min-content;
+            justify-content: center;
+            justify-self: start;
+            max-width: 100%;
+            overflow: visible;
+            padding: 0;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-yx71up,
+        .framer-0OTfK .framer-1farw96,
+        .framer-0OTfK .framer-1bfr76w,
+        .framer-0OTfK .framer-lswdom,
+        .framer-0OTfK .framer-fjoo8o,
+        .framer-0OTfK .framer-108006j {
+            --framer-link-text-color: #0099ff;
+            --framer-link-text-decoration: underline;
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            overflow: visible;
+            position: relative;
+            white-space: pre-wrap;
+            width: 100%;
+            word-break: break-word;
+            word-wrap: break-word
+        }
+
+        .framer-0OTfK .framer-1ttx2qv,
+        .framer-0OTfK .framer-mdirgo,
+        .framer-0OTfK .framer-1sbb9df,
+        .framer-0OTfK .framer-e3hz9t,
+        .framer-0OTfK .framer-8thvms,
+        .framer-0OTfK .framer-m0nbuo {
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            max-width: 400px;
+            overflow: visible;
+            position: relative;
+            white-space: pre-wrap;
+            width: 100%;
+            word-break: break-word;
+            word-wrap: break-word
+        }
+
+        .framer-0OTfK .framer-1tajqzm {
+            align-content: center;
+            align-items: center;
+            background-color: #061a40;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 20px;
+            height: min-content;
+            justify-content: center;
+            overflow: visible;
+            padding: 100px;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-ppnwco-container {
+            flex: none;
+            height: 80px;
+            position: relative;
+            width: 80px
+        }
+
+        .framer-0OTfK .framer-e94kp8 {
+            --framer-link-text-color: #0099ff;
+            --framer-link-text-decoration: underline;
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            max-width: 800px;
+            overflow: visible;
+            position: relative;
+            white-space: pre-wrap;
+            width: 100%;
+            word-break: break-word;
+            word-wrap: break-word
+        }
+
+        .framer-0OTfK .framer-hs489d {
+            --framer-link-text-color: #0099ff;
+            --framer-link-text-decoration: underline;
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            max-width: 100%;
+            overflow: visible;
+            position: relative;
+            white-space: pre-wrap;
+            width: 411px;
+            word-break: break-word;
+            word-wrap: break-word
+        }
+
+        .framer-0OTfK .framer-16l10u7 {
+            align-content: center;
+            align-items: center;
+            display: flex;
+            flex: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 10px;
+            height: min-content;
+            justify-content: center;
+            overflow: hidden;
+            padding: 10px 0 0;
+            position: relative;
+            width: min-content
+        }
+
+        .framer-0OTfK .framer-wbnr7r {
+            align-content: center;
+            align-items: center;
+            background-color: #0353a4;
+            border-radius: 8px;
+            display: flex;
+            flex: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 10px;
+            height: 40px;
+            justify-content: center;
+            overflow: visible;
+            padding: 15px;
+            position: relative;
+            width: min-content
+        }
+
+        .framer-0OTfK .framer-b7wgue {
+            align-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            display: flex;
+            flex: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 10px;
+            height: 40px;
+            justify-content: center;
+            overflow: visible;
+            padding: 15px;
+            position: relative;
+            text-decoration: none;
+            width: min-content
+        }
+
+        .framer-0OTfK .framer-xkgy0p {
+            --framer-link-text-color: #0099ff;
+            --framer-link-text-decoration: underline;
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            position: relative;
+            white-space: pre;
+            width: auto
+        }
+
+        .framer-0OTfK .framer-1ujjqfz {
+            align-content: center;
+            align-items: center;
+            background-color: #061a40;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 10px;
+            height: min-content;
+            justify-content: center;
+            overflow: hidden;
+            padding: 100px;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-14z9fb5 {
+            align-content: center;
+            align-items: center;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 0px;
+            height: min-content;
+            justify-content: center;
+            max-width: 1000px;
+            overflow: visible;
+            padding: 0;
+            position: relative;
+            width: 100%
+        }
+
+        .framer-0OTfK .framer-19v4aem {
+            align-content: center;
+            align-items: center;
+            display: flex;
+            flex: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 20px;
+            height: min-content;
+            justify-content: center;
+            min-height: 32px;
+            min-width: 32px;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: min-content
+        }
+
+        .framer-0OTfK .framer-14pcb6k {
+            --framer-link-hover-text-color: rgba(153, 153, 153, .6);
+            --framer-link-text-decoration: none;
+            --framer-paragraph-spacing: 0px;
+            flex: none;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            white-space: pre-wrap;
+            width: 100%;
+            word-break: break-word;
+            word-wrap: break-word
+        }
+
+        @supports (background: -webkit-named-image(i)) and (not (scale:1)) {
+
+            .framer-0OTfK .framer-72rtr7,
+            .framer-0OTfK .framer-64f1t2,
+            .framer-0OTfK .framer-1nj27gv,
+            .framer-0OTfK .framer-8u398o,
+            .framer-0OTfK .framer-1fwgq4i,
+            .framer-0OTfK .framer-13xutd,
+            .framer-0OTfK .framer-ql8ksj,
+            .framer-0OTfK .framer-1pha84p,
+            .framer-0OTfK .framer-1mta33s,
+            .framer-0OTfK .framer-136w9f,
+            .framer-0OTfK .framer-61jfsv,
+            .framer-0OTfK .framer-1uemalu,
+            .framer-0OTfK .framer-1ya84r9,
+            .framer-0OTfK .framer-26rkvc,
+            .framer-0OTfK .framer-l3o10m,
+            .framer-0OTfK .framer-164tptc,
+            .framer-0OTfK .framer-u998ha,
+            .framer-0OTfK .framer-1tajqzm,
+            .framer-0OTfK .framer-16l10u7,
+            .framer-0OTfK .framer-wbnr7r,
+            .framer-0OTfK .framer-b7wgue,
+            .framer-0OTfK .framer-1ujjqfz,
+            .framer-0OTfK .framer-14z9fb5,
+            .framer-0OTfK .framer-19v4aem {
+                gap: 0px
+            }
+
+            .framer-0OTfK .framer-72rtr7>*,
+            .framer-0OTfK .framer-13xutd>*,
+            .framer-0OTfK .framer-14z9fb5>* {
+                margin: 0
+            }
+
+            .framer-0OTfK .framer-72rtr7>:first-child,
+            .framer-0OTfK .framer-1nj27gv>:first-child,
+            .framer-0OTfK .framer-13xutd>:first-child,
+            .framer-0OTfK .framer-1mta33s>:first-child,
+            .framer-0OTfK .framer-136w9f>:first-child,
+            .framer-0OTfK .framer-61jfsv>:first-child,
+            .framer-0OTfK .framer-1uemalu>:first-child,
+            .framer-0OTfK .framer-1ya84r9>:first-child,
+            .framer-0OTfK .framer-26rkvc>:first-child,
+            .framer-0OTfK .framer-l3o10m>:first-child,
+            .framer-0OTfK .framer-164tptc>:first-child,
+            .framer-0OTfK .framer-u998ha>:first-child,
+            .framer-0OTfK .framer-1tajqzm>:first-child,
+            .framer-0OTfK .framer-1ujjqfz>:first-child,
+            .framer-0OTfK .framer-14z9fb5>:first-child {
+                margin-top: 0
+            }
+
+            .framer-0OTfK .framer-72rtr7>:last-child,
+            .framer-0OTfK .framer-1nj27gv>:last-child,
+            .framer-0OTfK .framer-13xutd>:last-child,
+            .framer-0OTfK .framer-1mta33s>:last-child,
+            .framer-0OTfK .framer-136w9f>:last-child,
+            .framer-0OTfK .framer-61jfsv>:last-child,
+            .framer-0OTfK .framer-1uemalu>:last-child,
+            .framer-0OTfK .framer-1ya84r9>:last-child,
+            .framer-0OTfK .framer-26rkvc>:last-child,
+            .framer-0OTfK .framer-l3o10m>:last-child,
+            .framer-0OTfK .framer-164tptc>:last-child,
+            .framer-0OTfK .framer-u998ha>:last-child,
+            .framer-0OTfK .framer-1tajqzm>:last-child,
+            .framer-0OTfK .framer-1ujjqfz>:last-child,
+            .framer-0OTfK .framer-14z9fb5>:last-child {
+                margin-bottom: 0
+            }
+
+            .framer-0OTfK .framer-64f1t2>*,
+            .framer-0OTfK .framer-1fwgq4i>*,
+            .framer-0OTfK .framer-1pha84p>*,
+            .framer-0OTfK .framer-16l10u7>*,
+            .framer-0OTfK .framer-wbnr7r>*,
+            .framer-0OTfK .framer-b7wgue>* {
+                margin: 0 5px
+            }
+
+            .framer-0OTfK .framer-64f1t2>:first-child,
+            .framer-0OTfK .framer-8u398o>:first-child,
+            .framer-0OTfK .framer-1fwgq4i>:first-child,
+            .framer-0OTfK .framer-ql8ksj>:first-child,
+            .framer-0OTfK .framer-1pha84p>:first-child,
+            .framer-0OTfK .framer-16l10u7>:first-child,
+            .framer-0OTfK .framer-wbnr7r>:first-child,
+            .framer-0OTfK .framer-b7wgue>:first-child,
+            .framer-0OTfK .framer-19v4aem>:first-child {
+                margin-left: 0
+            }
+
+            .framer-0OTfK .framer-64f1t2>:last-child,
+            .framer-0OTfK .framer-8u398o>:last-child,
+            .framer-0OTfK .framer-1fwgq4i>:last-child,
+            .framer-0OTfK .framer-ql8ksj>:last-child,
+            .framer-0OTfK .framer-1pha84p>:last-child,
+            .framer-0OTfK .framer-16l10u7>:last-child,
+            .framer-0OTfK .framer-wbnr7r>:last-child,
+            .framer-0OTfK .framer-b7wgue>:last-child,
+            .framer-0OTfK .framer-19v4aem>:last-child {
+                margin-right: 0
+            }
+
+            .framer-0OTfK .framer-1nj27gv>* {
+                margin: 87px 0
+            }
+
+            .framer-0OTfK .framer-8u398o>* {
+                margin: 0 30px
+            }
+
+            .framer-0OTfK .framer-ql8ksj>* {
+                margin: 0 20px
+            }
+
+            .framer-0OTfK .framer-1mta33s>*,
+            .framer-0OTfK .framer-61jfsv>*,
+            .framer-0OTfK .framer-1tajqzm>* {
+                margin: 10px 0
+            }
+
+            .framer-0OTfK .framer-136w9f>* {
+                margin: 30px 0
+            }
+
+            .framer-0OTfK .framer-1uemalu>*,
+            .framer-0OTfK .framer-1ya84r9>*,
+            .framer-0OTfK .framer-26rkvc>*,
+            .framer-0OTfK .framer-l3o10m>*,
+            .framer-0OTfK .framer-164tptc>*,
+            .framer-0OTfK .framer-u998ha>*,
+            .framer-0OTfK .framer-1ujjqfz>* {
+                margin: 5px 0
+            }
+
+            .framer-0OTfK .framer-19v4aem>* {
+                margin: 0 10px
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .framer-0OTfK .hidden-72rtr7 {
+                display: none !important
+            }
+        }
+
+        @media (min-width: 810px) and (max-width: 1199px) {
+            .framer-0OTfK .hidden-1wpxtxd {
+                display: none !important
+            }
+
+            .framer-body-augiA20Il {
+                background: #061A40
+            }
+
+            .framer-0OTfK .framer-72rtr7 {
+                width: 810px
+            }
+
+            .framer-0OTfK .framer-5cnglt-container {
+                bottom: 41px;
+                left: 456px
+            }
+
+            .framer-0OTfK .framer-xipz4v-container {
+                left: 189px
+            }
+
+            .framer-0OTfK .framer-13xutd {
+                padding: 80px 40px
+            }
+
+            .framer-0OTfK .framer-1xmirr5 {
+                height: var(--framer-aspect-ratio-supported, 346px);
+                width: 346px
+            }
+
+            .framer-0OTfK .framer-1mta33s {
+                height: 342px
+            }
+
+            .framer-0OTfK .framer-1tkavfn {
+                width: 333px
+            }
+
+            .framer-0OTfK .framer-fqydua {
+                height: 236px;
+                width: 351px
+            }
+
+            .framer-0OTfK .framer-136w9f,
+            .framer-0OTfK .framer-1ujjqfz {
+                padding: 50px
+            }
+
+            .framer-0OTfK .framer-1tajqzm {
+                padding: 100px 50px
+            }
+        }
+
+        @media (max-width: 809px) {
+            .framer-0OTfK .hidden-1cqfzvz {
+                display: none !important
+            }
+
+            .framer-body-augiA20Il {
+                background: #061A40
+            }
+
+            .framer-0OTfK .framer-72rtr7 {
+                height: 2700px;
+                width: 390px
+            }
+
+            .framer-0OTfK .framer-64f1t2 {
+                height: 400px;
+                padding: 20px
+            }
+
+            .framer-0OTfK .framer-1nj27gv {
+                gap: 100px;
+                order: 0
+            }
+
+            .framer-0OTfK .framer-8u398o {
+                gap: 6px;
+                justify-content: flex-start
+            }
+
+            .framer-0OTfK .framer-1fwgq4i {
+                flex: 1 0 0px;
+                width: 1px
+            }
+
+            .framer-0OTfK .framer-17o0hgk-container {
+                left: calc(50.00000000000002% - 100px / 2);
+                top: calc(82.22222222222224% - 100px / 2)
+            }
+
+            .framer-0OTfK .framer-1g2b9fy-container {
+                bottom: 14px;
+                left: 3px
+            }
+
+            .framer-0OTfK .framer-xipz4v-container {
+                bottom: 14px;
+                left: unset;
+                right: -4px;
+                top: unset
+            }
+
+            .framer-0OTfK .framer-13xutd {
+                height: 575px;
+                padding: 60px 20px
+            }
+
+            .framer-0OTfK .framer-ql8ksj {
+                flex-direction: column;
+                gap: 20px
+            }
+
+            .framer-0OTfK .framer-1mta33s {
+                flex: none;
+                width: 100%
+            }
+
+            .framer-0OTfK .framer-1tkavfn {
+                order: 0;
+                width: 350px
+            }
+
+            .framer-0OTfK .framer-fqydua {
+                height: 142px;
+                order: 1;
+                width: 346px
+            }
+
+            .framer-0OTfK .framer-136w9f {
+                align-content: flex-start;
+                align-items: flex-start;
+                gap: 40px;
+                padding: 20px
+            }
+
+            .framer-0OTfK .framer-lms3jt {
+                align-content: flex-start;
+                align-items: flex-start;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: flex-start
+            }
+
+            .framer-0OTfK .framer-1uemalu,
+            .framer-0OTfK .framer-1ya84r9,
+            .framer-0OTfK .framer-26rkvc,
+            .framer-0OTfK .framer-l3o10m,
+            .framer-0OTfK .framer-164tptc,
+            .framer-0OTfK .framer-u998ha {
+                align-self: unset
+            }
+
+            .framer-0OTfK .framer-1tajqzm {
+                padding: 60px 20px
+            }
+
+            .framer-0OTfK .framer-16l10u7 {
+                flex-direction: column;
+                width: 100%
+            }
+
+            .framer-0OTfK .framer-wbnr7r,
+            .framer-0OTfK .framer-b7wgue {
+                width: 100%
+            }
+
+            .framer-0OTfK .framer-1ujjqfz {
+                padding: 40px 20px
+            }
+
+            @supports (background: -webkit-named-image(i)) and (not (scale:1)) {
+
+                .framer-0OTfK .framer-1nj27gv,
+                .framer-0OTfK .framer-8u398o,
+                .framer-0OTfK .framer-ql8ksj,
+                .framer-0OTfK .framer-136w9f,
+                .framer-0OTfK .framer-lms3jt,
+                .framer-0OTfK .framer-16l10u7 {
+                    gap: 0px
+                }
+
+                .framer-0OTfK .framer-1nj27gv>* {
+                    margin: 50px 0
+                }
+
+                .framer-0OTfK .framer-1nj27gv>:first-child,
+                .framer-0OTfK .framer-ql8ksj>:first-child,
+                .framer-0OTfK .framer-136w9f>:first-child,
+                .framer-0OTfK .framer-lms3jt>:first-child,
+                .framer-0OTfK .framer-16l10u7>:first-child {
+                    margin-top: 0
+                }
+
+                .framer-0OTfK .framer-1nj27gv>:last-child,
+                .framer-0OTfK .framer-ql8ksj>:last-child,
+                .framer-0OTfK .framer-136w9f>:last-child,
+                .framer-0OTfK .framer-lms3jt>:last-child,
+                .framer-0OTfK .framer-16l10u7>:last-child {
+                    margin-bottom: 0
+                }
+
+                .framer-0OTfK .framer-8u398o>* {
+                    margin: 0 3px
+                }
+
+                .framer-0OTfK .framer-8u398o>:first-child {
+                    margin-left: 0
+                }
+
+                .framer-0OTfK .framer-8u398o>:last-child {
+                    margin-right: 0
+                }
+
+                .framer-0OTfK .framer-ql8ksj>* {
+                    margin: 10px 0
+                }
+
+                .framer-0OTfK .framer-136w9f>*,
+                .framer-0OTfK .framer-lms3jt>* {
+                    margin: 20px 0
+                }
+
+                .framer-0OTfK .framer-16l10u7>* {
+                    margin: 5px 0
+                }
+            }
+        }
+
+        .framer-gaKnT .framer-styles-preset-1d14i1y:not(.rich-text-wrapper),
+        .framer-gaKnT .framer-styles-preset-1d14i1y.rich-text-wrapper a {
+            --framer-link-current-text-color: #111111;
+            --framer-link-current-text-decoration: underline;
+            --framer-link-hover-text-color: #0088ff;
+            --framer-link-hover-text-decoration: underline;
+            --framer-link-text-color: #0099ff;
+            --framer-link-text-decoration: none
+        }
+
+        .framer-47hmZ [data-border=true]:after {
+            content: "";
+            border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
+            border-color: var(--border-color, none);
+            border-style: var(--border-style, none);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            border-radius: inherit;
+            pointer-events: none
+        }
+
+        .framer-47hmZ .framer-rqhbs3 {
+            position: relative;
+            overflow: hidden;
+            width: 100px;
+            height: 100px
+        }
+
+        .framer-47hmZ .framer-kj56m6 {
+            position: relative;
+            overflow: visible;
+            width: 1px;
+            height: 100%;
+            flex: 1 0 0px
+        }
+
+        .framer-47hmZ.framer-v-ina8tq .framer-rqhbs3,
+        .framer-47hmZ.framer-v-lwbc2o .framer-rqhbs3,
+        .framer-47hmZ.framer-v-vqryag .framer-rqhbs3,
+        .framer-47hmZ.framer-v-kwp1i3 .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1h8ejmh .framer-rqhbs3,
+        .framer-47hmZ.framer-v-c75qsa .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1ftwjq5 .framer-rqhbs3,
+        .framer-47hmZ.framer-v-osfy8l .framer-rqhbs3,
+        .framer-47hmZ.framer-v-5qhg5s .framer-rqhbs3,
+        .framer-47hmZ.framer-v-5ats54 .framer-rqhbs3,
+        .framer-47hmZ.framer-v-z5mnn6 .framer-rqhbs3,
+        .framer-47hmZ.framer-v-6xnqop .framer-rqhbs3,
+        .framer-47hmZ.framer-v-xmx6ye .framer-rqhbs3,
+        .framer-47hmZ.framer-v-a1v8wx .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1oj0oue .framer-rqhbs3,
+        .framer-47hmZ.framer-v-19e1lqz .framer-rqhbs3,
+        .framer-47hmZ.framer-v-16en86l .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1vzsblg .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1kgllbw .framer-rqhbs3,
+        .framer-47hmZ.framer-v-zia1yx .framer-rqhbs3,
+        .framer-47hmZ.framer-v-9mi1m7 .framer-rqhbs3,
+        .framer-47hmZ.framer-v-zgdwlg .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1dgnypb .framer-rqhbs3,
+        .framer-47hmZ.framer-v-rum36c .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1u5c2u8 .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1dt8e1w .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1rkl824 .framer-rqhbs3,
+        .framer-47hmZ.framer-v-17d51pb .framer-rqhbs3,
+        .framer-47hmZ.framer-v-158neyh .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1atb71u .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1x8h963 .framer-rqhbs3,
+        .framer-47hmZ.framer-v-hblyuj .framer-rqhbs3,
+        .framer-47hmZ.framer-v-cra8ie .framer-rqhbs3,
+        .framer-47hmZ.framer-v-1sz721s .framer-rqhbs3 {
+            width: 100px;
+            height: 100px
+        }
+
+        .framer-47hmZ.framer-v-1ftwjq5 .framer-kj56m6,
+        .framer-47hmZ.framer-v-osfy8l .framer-kj56m6 {
+            width: 1px;
+            height: 100%;
+            inset: auto;
+            flex: 1 0 0px
+        }
+
+        .ssr-variant {
+            display: contents
+        }
+    </style>
+
+    <!-- End of headEnd -->
+    <style type="text/css" data-framer-css="true"></style>
+</head>
+
+<body class="framer-body-augiA20Il">
+    <script async="" src="./TeleKeys - Monetize Your Telegram_files/script"
+        data-fid="30db1169bedbf61c34345b54fb3fc7ad863ea62fcbc094eb2d3a7147dc8bc87c"></script>
+
+
+    <!-- End of bodyStart -->
+    <div id="main"
+        data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;,&quot;localizationId&quot;:&quot;default&quot;,&quot;localeId&quot;:&quot;default&quot;}"
+        data-framer-ssr-released-at="2023-09-18T09:43:17.196Z" data-framer-page-optimized-at="2023-09-26T21:32:53.974Z">
+        <div class="framer-0OTfK framer-gaKnT" style="display:contents">
+            <div class="framer-72rtr7" style="min-height:100%;width:auto">
+                <div class="framer-64f1t2" data-framer-name="Hero" name="Hero">
+                    <div class="framer-1nj27gv" data-framer-name="Content" name="Content">
+                        <div class="framer-8u398o">
+                            <div class="framer-13gm2kw hidden-1cqfzvz"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <p style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-text-alignment:left;--framer-text-color:rgb(255, 255, 255)"
+                                    class="framer-text"><a class="framer-text framer-styles-preset-1d14i1y"
+                                        data-styles-preset="lTNe5PkVx" href="https://telekeys.tech/">Home</a></p>
+                            </div>
+                            <div class="framer-11it4vu"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <p style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-text-alignment:left;--framer-text-color:rgb(255, 255, 255)"
+                                    class="framer-text"><a class="framer-text framer-styles-preset-1d14i1y"
+                                        data-styles-preset="lTNe5PkVx" href="https://twitter.com/TeleKeysTech"
+                                        target="_blank" rel="noopener">Twitter</a></p>
+                            </div>
+                            <div class="framer-1vuhyfi"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <p style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-text-alignment:left;--framer-text-color:rgb(255, 255, 255)"
+                                    class="framer-text"><a class="framer-text framer-styles-preset-1d14i1y"
+                                        data-styles-preset="lTNe5PkVx" href="https://t.me/telekeystech" target="_blank"
+                                        rel="noopener">Telegram</a></p>
+                            </div>
+                            <div class="framer-jpaq4z"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <p style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-text-alignment:left;--framer-text-color:rgb(255, 255, 255)"
+                                    class="framer-text"><a class="framer-text framer-styles-preset-1d14i1y"
+                                        data-styles-preset="lTNe5PkVx" href="http://docs.telekeys.tech/" target="_blank"
+                                        rel="noopener">Documentation</a></p>
+                            </div>
+                            <div class="framer-1fwgq4i" data-framer-name="Button" name="Button">
+                                <div class="framer-jf0afv"
+                                    style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                    data-framer-component-type="RichTextContainer">
+                                    <p style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay03MDA=;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:14px;--framer-font-weight:700;--framer-text-alignment:center;--framer-text-color:rgb(3, 83, 164)"
+                                        class="framer-text"><a class="framer-text framer-styles-preset-1d14i1y"
+                                            data-styles-preset="lTNe5PkVx" href="https://t.me/telekeys_admin_bot"
+                                            target="_blank" rel="noopener">Add Bot</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="framer-14ojsaf"
+                            style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                            data-framer-component-type="RichTextContainer">
+                            <h1 style="--font-selector:R0Y7VW5ib3VuZGVkLTcwMA==;--framer-font-family:&quot;Unbounded&quot;, &quot;Unbounded Placeholder&quot;, sans-serif;--framer-font-size:80px;--framer-font-weight:700;--framer-line-height:1.1em;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
+                                class="framer-text">Monetize your community on Telegram.</h1>
+                        </div>
+                        <div class="framer-17o0hgk-container">
+                            <div class="framer-47hmZ framer-v-rqhbs3" style="display:contents" tabindex="0">
+                                <div data-framer-component-type="Stack" data-layoutid="AD1uRb789" id="YeKAoHUy2"
+                                    data-framer-name="Jason" data-framer-generated="true"
+                                    style="display: block; flex-shrink: 0; border-radius: 60px; background-color: rgb(245, 245, 245); height: 100%; width: 100%; transform: none; opacity: 1;"
+                                    class="framer-rqhbs3">
+                                    <div data-framer-stack-content-wrapper="true"
+                                        data-framer-stack-direction-reverse="false" data-framer-stack-gap-enabled="true"
+                                        style="display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:center;align-content:center;padding:0px 0px 0px 0px;width:100%;height:100%;--stack-native-column-gap:10px;--stack-native-row-gap:10px">
+                                        <div data-framer-legacy-stack-gap-enabled="true"
+                                            data-framer-stack-flexbox-gap="true"
+                                            style="display:contents;--stack-gap-x:10px;--stack-gap-y:0px">
+                                            <div class="framer-kj56m6"
+                                                style="border-radius: 60px; transform: none; opacity: 1;"
+                                                data-framer-name="Avatar">
+                                                <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
+                                                    data-framer-background-image-wrapper="true"><img
+                                                        src="./TeleKeys - Monetize Your Telegram_files/CPGgYEBeFy4gDXe5dDzh1qjQG1w.png"
+                                                        style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="framer-1g2b9fy-container">
+                            <div class="framer-47hmZ framer-v-1oj0oue" style="display:contents" tabindex="0">
+                                <div data-framer-component-type="Stack" data-layoutid="AD1uRb789" id="I2M_a_P9C"
+                                    data-framer-name="Arda" data-framer-generated="true"
+                                    style="display: block; flex-shrink: 0; border-radius: 60px; background-color: rgb(255, 219, 222); height: 100%; width: 100%; transform: none; opacity: 1;"
+                                    class="framer-rqhbs3">
+                                    <div data-framer-stack-content-wrapper="true"
+                                        data-framer-stack-direction-reverse="false" data-framer-stack-gap-enabled="true"
+                                        style="display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:center;align-content:center;padding:0px 0px 0px 0px;width:100%;height:100%;--stack-native-column-gap:10px;--stack-native-row-gap:10px">
+                                        <div data-framer-legacy-stack-gap-enabled="true"
+                                            data-framer-stack-flexbox-gap="true"
+                                            style="display:contents;--stack-gap-x:10px;--stack-gap-y:0px">
+                                            <div class="framer-kj56m6"
+                                                style="border-radius: 60px; transform: none; opacity: 1;"
+                                                data-framer-name="Avatar">
+                                                <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
+                                                    data-framer-background-image-wrapper="true"><img
+                                                        src="./TeleKeys - Monetize Your Telegram_files/U8RU6HcYtcK32VUY2uTSF9QTqo.png"
+                                                        style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="framer-5cnglt-container">
+                            <div class="framer-47hmZ framer-v-a1v8wx" style="display:contents" tabindex="0">
+                                <div data-framer-component-type="Stack" data-layoutid="AD1uRb789" id="ZIEnVI5XD"
+                                    data-framer-name="Carley" data-framer-generated="true"
+                                    style="display: block; flex-shrink: 0; border-radius: 60px; background-color: rgb(189, 71, 81); height: 100%; width: 100%; transform: none; opacity: 1;"
+                                    class="framer-rqhbs3">
+                                    <div data-framer-stack-content-wrapper="true"
+                                        data-framer-stack-direction-reverse="false" data-framer-stack-gap-enabled="true"
+                                        style="display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:center;align-content:center;padding:0px 0px 0px 0px;width:100%;height:100%;--stack-native-column-gap:10px;--stack-native-row-gap:10px">
+                                        <div data-framer-legacy-stack-gap-enabled="true"
+                                            data-framer-stack-flexbox-gap="true"
+                                            style="display:contents;--stack-gap-x:10px;--stack-gap-y:0px">
+                                            <div class="framer-kj56m6"
+                                                style="border-radius: 60px; transform: none; opacity: 1;"
+                                                data-framer-name="Avatar">
+                                                <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
+                                                    data-framer-background-image-wrapper="true"><img
+                                                        src="./TeleKeys - Monetize Your Telegram_files/40ioqcNOrsoBIVnpfGVsXh9jpM.png"
+                                                        style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="framer-xipz4v-container">
+                            <div class="framer-47hmZ framer-v-5ats54" style="display:contents" tabindex="0">
+                                <div data-framer-component-type="Stack" data-layoutid="AD1uRb789" id="s6a5MV4Fp"
+                                    data-framer-name="Ayisha" data-framer-generated="true"
+                                    style="display: block; flex-shrink: 0; border-radius: 60px; background-color: rgb(28, 123, 233); height: 100%; width: 100%; transform: none; opacity: 1;"
+                                    class="framer-rqhbs3">
+                                    <div data-framer-stack-content-wrapper="true"
+                                        data-framer-stack-direction-reverse="false" data-framer-stack-gap-enabled="true"
+                                        style="display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:center;align-content:center;padding:0px 0px 0px 0px;width:100%;height:100%;--stack-native-column-gap:10px;--stack-native-row-gap:10px">
+                                        <div data-framer-legacy-stack-gap-enabled="true"
+                                            data-framer-stack-flexbox-gap="true"
+                                            style="display:contents;--stack-gap-x:10px;--stack-gap-y:0px">
+                                            <div class="framer-kj56m6"
+                                                style="border-radius: 60px; transform: none; opacity: 1;"
+                                                data-framer-name="Avatar">
+                                                <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
+                                                    data-framer-background-image-wrapper="true"><img
+                                                        src="./TeleKeys - Monetize Your Telegram_files/5nnqp2inSINDktAAWpI7gxJei0w.png"
+                                                        style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="framer-13xutd" data-framer-name="Text" name="Text">
+                    <div class="framer-ql8ksj" data-framer-name="Content" name="Content">
+                        <div class="framer-1pha84p hidden-1cqfzvz" data-framer-name="Left" name="Left">
+                            <div class="framer-1xmirr5" data-framer-name="Image" name="Image">
+                                <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0"
+                                    data-framer-background-image-wrapper="true"><img
+                                        src="./TeleKeys - Monetize Your Telegram_files/mnn1HN4Zd3U4tWIPbgKX0ZS6wk.jpg"
+                                        alt=""
+                                        style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="framer-1mta33s" data-framer-name="Right" name="Right">
+                            <div class="framer-1tkavfn"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7VW5ib3VuZGVkLTcwMA==;--framer-font-family:&quot;Unbounded&quot;, &quot;Unbounded Placeholder&quot;, sans-serif;--framer-font-size:48px;--framer-font-weight:700;--framer-text-alignment:left;--framer-text-color:rgb(255, 255, 255)"
+                                    class="framer-text">TeleKeys</h2>
+                            </div>
+                            <div class="framer-fqydua" data-framer-name="Right"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h3 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(255, 255, 255)"
+                                    class="framer-text">Welcome to the world of TeleKeys, where monetizing your Telegram
+                                    groups is just a click away. <!-- --><br class="framer-text"><br
+                                        class="framer-text">We’ve harnessed the power of blockchain technology to
+                                    revolutionize the way you interact and earn within your Telegram
+                                    communities.<!-- --><br class="framer-text"><br class="framer-text">Earn revenue
+                                    when people buy and trade keys to your Telegram group. Hold our token, $KEYS to earn
+                                    additional revenue share as well.<!-- --></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="framer-136w9f" data-framer-name="FAQ" name="FAQ">
+                    <div class="framer-61jfsv">
+                        <div class="framer-t5vdev-container">
+                            <div
+                                style="width:100%;height:100%;clip-path:url(#curve-PNeEw5vVp-s19y9);background:linear-gradient(135deg, rgb(185, 214, 242), rgb(0, 109, 170))">
+                                <svg>
+                                    <clippath id="curve-PNeEw5vVp-s19y9" clipPathUnits="objectBoundingBox"
+                                        transform="scale(0.005)">
+                                        <path
+                                            d="M71.5579 16.3347C84.3365 -5.4449 115.825 -5.44489 128.603 16.3347L129.067 17.1257C134.963 27.1733 145.709 33.378 157.358 33.4596L158.276 33.466C183.527 33.6428 199.271 60.9123 186.798 82.8687L186.345 83.6661C180.591 93.7953 180.591 106.205 186.345 116.334L186.798 117.131C199.271 139.088 183.527 166.357 158.276 166.534L157.358 166.54C145.709 166.622 134.963 172.827 129.067 182.874L128.603 183.665C115.825 205.445 84.3365 205.445 71.5579 183.665L71.0938 182.874C65.1986 172.827 54.4517 166.622 42.8027 166.54L41.8856 166.534C16.6346 166.357 0.890585 139.088 13.3629 117.131L13.8159 116.334C19.5698 106.205 19.5698 93.7953 13.8159 83.6661L13.3629 82.8687C0.890585 60.9123 16.6346 33.6428 41.8856 33.466L42.8027 33.4596C54.4518 33.378 65.1986 27.1733 71.0938 17.1257L71.5579 16.3347Z">
+                                        </path>
+                                    </clippath>
+                                </svg></div>
+                        </div>
+                        <div class="framer-c208ut"
+                            style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                            data-framer-component-type="RichTextContainer">
+                            <h2 style="--font-selector:R0Y7VW5ib3VuZGVkLTcwMA==;--framer-font-family:&quot;Unbounded&quot;, &quot;Unbounded Placeholder&quot;, sans-serif;--framer-font-size:48px;--framer-font-weight:700;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                class="framer-text">The Future of Social Finance</h2>
+                        </div>
+                    </div>
+                    <div class="framer-lms3jt" data-framer-name="Questions Row" name="Questions Row">
+                        <div class="framer-1uemalu" data-framer-name="Q&amp;A" name="Q&amp;A">
+                            <div class="framer-yx71up"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay03MDA=;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-font-weight:700;--framer-letter-spacing:-0.025em;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">Monetize Groups</h2>
+                            </div>
+                            <div class="framer-1ttx2qv"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">Turn your group chats into cash cows with our bot.</h2>
+                            </div>
+                        </div>
+                        <div class="framer-1ya84r9" data-framer-name="Q&amp;A" name="Q&amp;A">
+                            <div class="framer-1farw96"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay03MDA=;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-font-weight:700;--framer-letter-spacing:-0.025em;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">Earn Larger Fees</h2>
+                            </div>
+                            <div class="framer-mdirgo"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">TeleKeys offers 75% of all trading volume fees to group chat
+                                    owners, higher than most SocialFi platforms.</h2>
+                            </div>
+                        </div>
+                        <div class="framer-26rkvc" data-framer-name="Q&amp;A" name="Q&amp;A">
+                            <div class="framer-1bfr76w"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay03MDA=;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-font-weight:700;--framer-letter-spacing:-0.025em;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">Base-Powered</h2>
+                            </div>
+                            <div class="framer-1sbb9df"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">Leverage the unparalleled security and speed of Base, the
+                                    perfect Layer-2 scaling solution for Social Finance.</h2>
+                            </div>
+                        </div>
+                        <div class="framer-l3o10m" data-framer-name="Q&amp;A" name="Q&amp;A">
+                            <div class="framer-lswdom"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay03MDA=;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-font-weight:700;--framer-letter-spacing:-0.025em;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">$KEYS Rewards</h2>
+                            </div>
+                            <div class="framer-e3hz9t"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">Hold $KEYS, refer others, earn points for future revenue share
+                                    airdrops.</h2>
+                            </div>
+                        </div>
+                        <div class="framer-164tptc" data-framer-name="Q&amp;A" name="Q&amp;A">
+                            <div class="framer-fjoo8o"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay03MDA=;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-font-weight:700;--framer-letter-spacing:-0.025em;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">Easy Integration</h2>
+                            </div>
+                            <div class="framer-8thvms"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">A breeze to set up and manage, revolutionizing your community.
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="framer-u998ha" data-framer-name="Q&amp;A" name="Q&amp;A">
+                            <div class="framer-108006j"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay03MDA=;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-font-weight:700;--framer-letter-spacing:-0.025em;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">Decentralized Ecosystem</h2>
+                            </div>
+                            <div class="framer-m0nbuo"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <h2 style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-line-height:1.5em;--framer-text-alignment:left;--framer-text-color:rgb(185, 214, 242)"
+                                    class="framer-text">Harmonize the creative energy of a decentralized community.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="framer-1tajqzm" data-framer-name="Call to Action" name="Call to Action">
+                    <div class="framer-ppnwco-container">
+                        <div
+                            style="width:100%;height:100%;clip-path:url(#curve-PsUPn38Zh-2qgtm7);background:linear-gradient(315deg, rgb(185, 214, 242), rgb(0, 109, 170))">
+                            <svg>
+                                <clippath id="curve-PsUPn38Zh-2qgtm7" clipPathUnits="objectBoundingBox"
+                                    transform="scale(0.005)">
+                                    <path
+                                        d="M170 129.496C170 168.434 138.66 200 100 200C61.3401 200 30 168.434 30 129.496C30 92.6391 65.8392 48.2064 95.1126 6.95421C97.5122 3.57266 102.538 3.53875 104.974 6.89421C135.351 48.7369 170 92.5911 170 129.496Z">
+                                    </path>
+                                </clippath>
+                            </svg></div>
+                    </div>
+                    <div class="framer-e94kp8"
+                        style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                        data-framer-component-type="RichTextContainer">
+                        <h2 style="--font-selector:R0Y7VW5ib3VuZGVkLTcwMA==;--framer-font-family:&quot;Unbounded&quot;, &quot;Unbounded Placeholder&quot;, sans-serif;--framer-font-size:48px;--framer-font-weight:700;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
+                            class="framer-text">Join Now</h2>
+                    </div>
+                    <div class="framer-hs489d"
+                        style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                        data-framer-component-type="RichTextContainer">
+                        <p style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-line-height:1.5em;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
+                            class="framer-text">Ready to unleash the potential of your Telegram groups and earn some
+                            well deserved income? <!-- --><br class="framer-text">Hop on the TeleKeys rocket and let’s
+                            make it happen!<!-- --></p>
+                    </div>
+                    <div class="framer-16l10u7">
+                        <div class="framer-wbnr7r" data-framer-name="Button" name="Button">
+                            <div class="framer-1rh8iaf"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <p style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay03MDA=;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:14px;--framer-font-weight:700;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
+                                    class="framer-text"><a class="framer-text framer-styles-preset-1d14i1y"
+                                        data-styles-preset="lTNe5PkVx" href="https://t.me/telekeys_admin_bot"
+                                        target="_blank" rel="noopener">Add Bot</a></p>
+                            </div>
+                        </div><a class="framer-b7wgue framer-lux5qc" data-framer-name="Button" name="Button"
+                            href="http://docs.telekeys.tech/" target="_blank" rel="noopener">
+                            <div class="framer-xkgy0p"
+                                style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                                data-framer-component-type="RichTextContainer">
+                                <p style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay03MDA=;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-font-size:14px;--framer-font-weight:700;--framer-text-alignment:center"
+                                    class="framer-text">Learn More</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="framer-1ujjqfz" data-framer-name="Footer" name="Footer">
+                    <div class="framer-14z9fb5" data-framer-name="Copyright" name="Copyright">
+                        <div class="framer-19v4aem hidden-1cqfzvz" data-framer-name="Icons" name="Icons"></div>
+                        <div class="framer-14pcb6k"
+                            style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none"
+                            data-framer-component-type="RichTextContainer">
+                            <p style="--font-selector:R0Y7U3BhY2UgR3JvdGVzay1yZWd1bGFy;--framer-font-family:&quot;Space Grotesk&quot;, &quot;Space Grotesk Placeholder&quot;, sans-serif;--framer-line-height:1.5em;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
+                                class="framer-text">© TeleKeys, All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+    </div>
+    <div id="svg-templates" style="position: absolute; overflow: hidden; top: 0; left: 0; width: 0; height: 0">
+    </div>
+
+    <script data-framer-appear-animation="no-preference"></script>
+    <script type="module" data-framer-bundle=""
+        src="./TeleKeys - Monetize Your Telegram_files/default_script0.XW4JFFPJ.mjs"></script>
+
+    <!-- End of bodyEnd -->
+
+
+</body>
+
+</html>
